@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NFTCard } from './components/NFTCard';
+import { NFTCard } from '/components/NFTCard';
 
 const Home = () => {
 
@@ -89,7 +89,7 @@ const Home = () => {
       </div>
 
       <div className='flex flex-wrap gap-y-12 mt-4 w-5/6 gap-x-2 justify-center'>
-        {NFTs.length && NFTs.map(nft => <NFTCard nft={nft}/>)}
+        {NFTs.length && NFTs.map(nft => <NFTCard nft={nft} key={nft.tokenUri.gateway}/>)}
       </div>
     </div>
   )
