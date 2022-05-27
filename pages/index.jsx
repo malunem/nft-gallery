@@ -1,6 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { useState } from 'react';
+import { NFTCard } from './components/NFTCard';
 
 const Home = () => {
 
@@ -87,6 +86,10 @@ const Home = () => {
         }}>
           Let's go!
         </button>
+      </div>
+
+      <div className='flex flex-wrap gap-y-12 mt-4 w-5/6 gap-x-2 justify-center'>
+        {NFTs.length && NFTs.map(nft => <NFTCard nft={nft}/>)}
       </div>
     </div>
   )
